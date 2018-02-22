@@ -1,8 +1,5 @@
 # GitLabStatus
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/git_lab_status`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple gem to check average response time to <https://gitlab.com> or <https://about.gitlab.com> during one minute.
 
 ## Installation
 
@@ -32,7 +29,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/git_lab_status.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Folkman/git_lab_status.
 
 ## License
 
