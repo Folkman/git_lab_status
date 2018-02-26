@@ -7,6 +7,7 @@ RSpec.describe GitLabStatus do
 
   context "methods" do
     before(:each) do
+      # Shorten the interval and total_time for testing
       allow(GitLabStatus).to receive(:interval).and_return(0.1)
       allow(GitLabStatus).to receive(:total_time).and_return(0.3)
     end

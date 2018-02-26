@@ -33,21 +33,19 @@ private
   def self.page_resp(url)
     print "Checking \"#{url}\" response time. Please wait #{total_time} seconds."
 
-    first_check = true
     resp_times = []
     start_minute = Time.now
-    start_load_time = start_minute
 
     loop do
-      if first_check || (Time.now - start_load_time) >= interval
-        start_load_time = Time.now
-        open(url)
-        load_time = Time.now - start_load_time
-        resp_times << load_time
-        print '.'
-      end
+      start_load_time = Time.now
+      open(url)
+      load_time = Time.now - start_load_time
+      resp_times << load_time
 
-      first_check = false
+      print '.'
+
+      sleep_time = interval - load_time
+      sleep sleep_time if sleep_time > 0
 
       break if Time.now - start_minute >= total_time
     end
