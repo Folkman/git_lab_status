@@ -31,6 +31,8 @@ private
 
 
   def self.page_resp(url)
+    print "Checking \"#{url}\" response time. Please wait #{total_time} seconds."
+
     first_check = true
     resp_times = []
     start_minute = Time.now
@@ -50,9 +52,12 @@ private
       break if Time.now - start_minute >= total_time
     end
 
-    puts
+    avg_time = resp_times.reduce(:+).fdiv(resp_times.size).round(2)
 
-    resp_times.reduce(:+).fdiv(resp_times.size).round(2)
+    puts
+    puts "Average response time: #{avg_time} seconds"
+
+    avg_time
   end
 
 

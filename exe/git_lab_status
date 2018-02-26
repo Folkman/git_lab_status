@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'git_lab_status'
+
+case ARGV[0]
+when 'about'
+  GitLabStatus.about_page_resp
+else
+  GitLabStatus.home_page_resp
+end

@@ -19,7 +19,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use as a CLI, run `rake install`, then run `git_lab_status` in the commandline to check <https://gitlab.com>. Accepts `about` as an argument for <https://about.gitlab.com>.
+
 
 ## Development
 
